@@ -1,0 +1,54 @@
+GRINN's Chilisom layer
+
+Common targets are:
+    core-image-minimal		A small image just capable of allowing a device to boot
+
+    core-image-base		A console-only image that fully supports the target device hardware.
+
+    core-image-sato		Image with Sato, a mobile environment and visual style for
+				mobile devices. The image supports X11 with a Sato theme, Pimlico
+				applications, and contains terminal, editor, and file manager."
+    meta-toolchain
+    adt-installer
+    meta-ide-support
+
+Additional Yocto targets are:
+    core-image-full-cmdline	A console-only image with more full-featured Linux system
+				functionality installed.
+
+    core-image-kernel-dev	A development image that builds the kernel and packages that are
+				sensitive to kernel updates and version changes
+
+    core-image-lsb-dev		Basic image without X support suitable for development work. It
+				can be used for customization and implementations that conform to Linux
+				Standard Base (LSB).
+
+    core-image-lsb-sdk		Basic image without X support suitable for Linux Standard Base
+				(LSB) implementations. It includes the full meta-toolchain, plus development
+				headers and libraries to form a standalone SDK.
+
+    core-image-lsb		An image containing packages that are required to conform
+				to the Linux Standard Base (LSB) specification.
+
+    core-image-minimal-dev	A small image just capable of allowing a device to boot and
+				is suitable for development work.
+
+    core-image-minimal-initramfs	
+				Small image capable of booting a device. The kernel includes
+				the Minimal RAM-based Initial Root Filesystem (initramfs), which finds the
+				first 'init' program more efficiently.
+
+    core-image-minimal-mtdutils
+				Small image capable of booting a device with support for the
+				Minimal MTD Utilities, which let the user interact with the MTD subsystem in
+				the kernel to perform operations on flash devices
+
+    core-image-sato-dev		Image with Sato for development work. It includes everything
+				within core-image-sato plus a native toolchain, application development and
+				testing libraries, profiling and debug symbols.
+				You can also run generated qemu images with a command like 'runqemu qemux86'
+
+    core-image-sato-sdk		Image with Sato support that includes everything within
+				core-image-sato plus meta-toolchain, development headers and libraries to
+				form a standalone SDK.
+

@@ -1,0 +1,15 @@
+findfdt=setenv fdtfile zImage-%KERNEL_DEVICETREE%
+
+serverip=192.168.0.187
+rootpath=/export/rootfs
+ipaddr=192.168.0.175
+
+tftpimage=tftp ${loadaddr} ${bootfile}
+tftpfdt=tftp ${fdtaddr} ${fdtfile}
+
+# Uncomment to load kernel and FDT from SDCARD
+uenvcmd=mmc rescan; run loadimage; run findfdt; run loadfdt; run mmcargs; bootz ${loadaddr} - ${fdtaddr}
+
+# Uncomment to load kernel and FDT from TFTP
+#uenvcmd=run tftpimage; run findfdt; run tftpfdt; run mmcargs; bootz ${loadaddr} - ${fdtaddr}
+
